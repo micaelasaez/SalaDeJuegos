@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<div class="fondo">
+  <div class="midle">
+    <div class="input">
+      <mat-grid-list cols="3" rowHeight="100px">
+        <mat-grid-tile colspan="3" rowspan="2" style="background-color: #3a68ff;">
+          <img src="/assets/imagenes/colores.png" class="imgn">
+        </mat-grid-tile>
+        <mat-grid-tile class="mostrar" colspan="3" rowspan="1" style="background-color: #3a68ff;">
+          Adivine el color en inglés
+        </mat-grid-tile>
+        <mat-grid-tile class="mostrar" colspan="3" rowspan="2" [style.background]="color">
+          <h3>Guess this color...</h3>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <br>
+      <label>Ingrese su respuesta</label>
+      <mat-form-field class="fill">
+        <input type="text" matInput placeholder="Respuesta" name="resp"[(ngModel)]="respuesta" required>
+      </mat-form-field>
+      <br>
+      <div class="input">
+        <button mat-raised-button style="width: 100%; background-color:#2bf702;color:black" (click)="Verificar()">Responder</button>
+      </div><br><br>
+      <div class="input">
+        <button mat-raised-button (click)="Nueva()" style="width: 100%; background-color:#2eceff;color:black">Nuevo</button>
+      </div>
+      <br>
+      <div class="input" *ngIf="respondio">
+        <h2>{{msgResultado}}</h2>
+      </div>
+      <br><br><br><br>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<app-menu></app-menu>
+<div class="fondo">
+  <div class="midle">
+    <img src="/assets/imagenes/listado.jpg" class="imgn">
+    <div class="input">
+      <table matSort (matSortChange)="sortData($event)" style="width: 100%; border: 2px solid red; text-align: center;">
+        <tr>
+          <th mat-sort-header="name">Juego</th>
+          <th mat-sort-header="email">Mail</th>
+          <th mat-sort-header="score">Puntuacion</th>
+        </tr>
+        <tr *ngFor="let punt of mostrarArr">
+          <td >{{punt.juego}}</td>
+          <td >{{punt.mail}}</td>
+          <td >{{punt.puntuacion}}</td>
+        </tr>
+      </table>
+    </div>
+    <button mat-raised-button color="warn" (click)="Filtrar()">
+      <h2>Filtrar Por Jugadores</h2>
+      <img src="/assets/imagenes/jugadores.png" class="imgn">
+    </button>
+  </div>
+</div>

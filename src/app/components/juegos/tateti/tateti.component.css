@@ -1,0 +1,34 @@
+.mostrar{
+    font-size: 50px;
+    color:rgb(41, 36, 36);
+}
+.mostrar2{
+    font-size: 75px;
+    color:grey;
+}
+
+.fondo {
+  width: 100%; height: 100%; text-align: center; background-color: rgb(255, 121, 121);
+}
+
+.imgn {
+  width: 150px;
+  height: 150px;
+  margin-left: 30px;
+}
+.midle {
+  margin-left: 10%;
+  width: 80%;
+  height: 100%;
+  background: rgb(255, 163, 163);
+  color: black;
+  text-align: center;
+  }
+  .input {
+    margin: auto;
+    width: 100%;
+  }
+  .fill{
+      width: 95%;
+      padding: 10px;
+  }

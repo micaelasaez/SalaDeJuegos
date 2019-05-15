@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+<div class="fondo">
+  <div class="midle">
+    <div class="input">
+      <mat-grid-list cols="3" rowHeight="80px">
+        <ng-container *ngFor="let tile of tiles">
+          <mat-grid-tile class="mostrar"
+              [colspan]="tile.cols"
+              [rowspan]="tile.rows"
+              [style.background]="tile.color"
+              (click)="juego(tile.text)">
+            <h2>{{tile.text}}</h2>
+            <img [src]="tile.foto" class="imgn">
+          </mat-grid-tile>
+        </ng-container>
+      </mat-grid-list>
+    </div>
+  </div>
+</div>
+

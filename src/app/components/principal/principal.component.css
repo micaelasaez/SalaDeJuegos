@@ -1,0 +1,20 @@
+.imagenDeMenu{
+width: 80px;
+height: 70px;
+}
+
+.hero-text {
+    text-align: center;
+    color: #100000;
+    }
+.fondo {
+  width: 100%; height: 100%; text-align: center; background-color: rgb(255, 121, 121);
+}
+.list {
+  text-align: center; height: 100%; width: 90%; background-color: rgb(255, 189, 189);
+  margin-left: 5%;
+}
+.imgn {
+  width: 30px;
+  height: 30px;
+}

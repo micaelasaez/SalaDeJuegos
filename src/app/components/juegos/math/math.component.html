@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<div class="fondo">
+  <div class="midle">
+    <div class="input">
+      <mat-grid-list cols="3" rowHeight="100px">
+        <mat-grid-tile colspan="3" rowspan="2" style="background-color: #9dff00;">
+          <img src="/assets/imagenes/cerebro.jpg" class="imgn">
+        </mat-grid-tile>
+        <mat-grid-tile class="mostrar"
+              *ngFor="let tile of tiles"
+            [colspan]="tile.cols"
+            [rowspan]="tile.rows"
+            [style.background]="tile.color">
+          {{tile.text}}
+        </mat-grid-tile>
+      </mat-grid-list>
+      <br>
+      <mat-form-field class="fill">
+        <input type="test" matInput placeholder="Respuesta" name="resp"[(ngModel)]="respuesta" required>
+      </mat-form-field>
+      <br>
+      <div class="input">
+        <div class="example-button-row">
+          <button (click)="ngOnInit()" class="boton"mat-raised-button type="reset" style="width: 50%; background-color:#2eceff;color:black" >Nuevo</button>
+          <button (click)="Comprobar()" class="boton" mat-raised-button style="width: 50%; background-color:#2bf702;color:black">Responder</button>
+        </div>
+      </div>
+      <br>
+      <mat-progress-bar
+        [value]="aux">
+      </mat-progress-bar>
+      <br><br><br><br>
+    </div>
+  </div>
+</div>

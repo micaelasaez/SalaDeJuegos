@@ -1,0 +1,33 @@
+<div class="fondo">
+  <form>
+    <div class="midle">
+      <div>
+        <img src="/assets/imagenes/login.png" class="imgn">
+        <h1 style="font-size:50px; margin: auto; width: 99%"> Log In</h1>
+      </div>
+      <div class="input">
+        <mat-form-field class="fill">
+          <input type="email" matInput placeholder="Email" name="email" [(ngModel)]="email" required>
+        </mat-form-field>
+      </div>
+      <div class="input">
+        <mat-form-field class="fill">
+          <input type="password" matInput placeholder="Password" name="pass"[(ngModel)]="password" required>
+        </mat-form-field>
+      </div>
+      <div class="input">
+        <div class="example-button-row">
+          <button class="boton"mat-raised-button type="reset" style="width: 50%; background-color:#f57474;color:black" value="Reset">Limpiar</button>
+          <button (click)="Logearse()" class="boton" mat-raised-button style="width: 50%; background-color:#70f6af;color:black">Ingresar</button>
+        </div>
+        <div class="input">
+          <br><br>
+          <h5>No estás registrado?</h5>
+          <a href="/signup" mat-raised-button class="boton" style="width: 100%; background-color:#e19cfc;color:black" >Registrarse</a>
+          <br><br><br><br><br><br>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+

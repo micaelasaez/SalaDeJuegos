@@ -1,0 +1,28 @@
+.mostrar{
+    font-size: 20px;
+}
+
+.midle {
+  margin-left: 10%;
+  width: 80%;
+  height: 100%;
+  background: rgb(255, 163, 163);
+  color: black;
+  text-align: center;
+  }
+  .input {
+    margin: auto;
+    width: 100%;
+  }
+  .fill{
+      width: 95%;
+      padding: 10px;
+  }
+.imgn {
+  width: 100px;
+  margin-left: 30px;
+  height: 100px;
+}
+  .fondo {
+    width: 100%; height: 100%; text-align: center; background-color: rgb(255, 121, 121);
+  }
