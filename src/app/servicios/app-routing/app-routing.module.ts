@@ -17,13 +17,13 @@ const rutas: Routes =[
   {path: 'signup', component: SignupComponent},
   {path: 'login', component: LoginComponent},
   {path: '', component: PrincipalComponent},
-  {path: 'score', component: PuntuacionesComponent, canActivate: [ConeccionService]},
-  {path: 'tateti', component: TatetiComponent, canActivate: [ConeccionService]},
-  {path: 'palabras', component: PalabrasComponent, canActivate: [ConeccionService]},
-  {path: 'math', component: MathComponent, canActivate: [ConeccionService]},
-  {path: 'inicio', component: InicioComponent, canActivate: [ConeccionService]},
-  {path: 'adivina', component: AdivinanumeroComponent, canActivate: [ConeccionService]},
-  {path: 'colores', component: ColoresComponent, canActivate: [ConeccionService]}
+  {path: 'score', component: PuntuacionesComponent, canActivate: [ ConeccionService ]},
+  {path: 'tateti', component: TatetiComponent, canActivate: [ ConeccionService ]},
+  {path: 'palabras', component: PalabrasComponent, canActivate: [ ConeccionService ]},
+  {path: 'math', component: MathComponent, canActivate: [ ConeccionService ]},
+  {path: 'inicio', component: InicioComponent, canActivate: [ ConeccionService ]},
+  {path: 'adivina', component: AdivinanumeroComponent, canActivate: [ ConeccionService ]},
+  {path: 'colores', component: ColoresComponent, canActivate: [ ConeccionService ]}
 ];
 
 @NgModule({

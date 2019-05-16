@@ -1,0 +1,6 @@
+[
+  { "mail": "aaa@gmail.com", "nombre": "aaa", "apellido": "aaa", "clave": "111111" },
+  { "mail": "bbb@gmail.com", "nombre": "bbb", "apellido": "bbb", "clave": "111111" },
+  { "mail": "ccc@gmail.com", "nombre": "ccc", "apellido": "ccc", "clave": "111111" },
+  { "mail": "ddd@gmail.com", "nombre": "ddd", "apellido": "ddd", "clave": "111111" }
+]

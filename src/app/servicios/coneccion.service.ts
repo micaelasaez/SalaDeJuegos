@@ -7,20 +7,20 @@ import {JwtHelperService} from '@auth0/angular-jwt';
   providedIn: 'root'
 })
 export class ConeccionService implements CanActivate {
-  helper=new JwtHelperService();
+  helper = new JwtHelperService();
 
   canActivate()
   {
-    console.log(localStorage.getItem("Token"));
+    console.log(localStorage.getItem('Token'));
 
-      if(localStorage.getItem("Token"))
+      if (localStorage.getItem('Token') != null)
       {
           return true;
       }
-      this.router.navigate(["/login"]);
+      this.router.navigate(['/login']);
 
 
       return false;
   }
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 }

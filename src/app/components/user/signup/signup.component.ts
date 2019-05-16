@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatSnackBar} from '@angular/material';
-import { ServerService } from "../../../servicios/server.service";
-import { MailErrorComponent,NoPassComponent } from "../login/login.component";
+import { ServerService } from '../../../servicios/server.service';
+import { MailErrorComponent, NoPassComponent } from '../login/login.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,50 +10,48 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  email="";
-  apellido="";
-  nombre="";
-  password="";
-  constructor(public snackBar: MatSnackBar,private http:ServerService,private router:Router) { }
+  email = "";
+  apellido = "";
+  nombre = "";
+  password ='';
+  constructor(public snackBar: MatSnackBar, private http: ServerService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  Logearse(){
-    var emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-    if(!emailRegex.test(this.email))
-    {
+  Logearse() {
+    let emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    if (!emailRegex.test(this.email)) {
       this.mailMal();
       return 0;
     }
-    if (!this.password) 
+    if (!this.password)
     {
       this.noPass();
       return 0;
     }
-    if(!this.nombre)
-    {
+    if (!this.nombre) {
       this.faltaCampos();
       return 0;
     }
-    if( !this.apellido )
-    {
+    if ( !this.apellido ) {
       this.faltaCampos();
       return 0;
     }
 
-    this.http.SignUp(this.nombre,this.apellido,this.email,this.password).subscribe(data=>{
+    this.router.navigate(['/inicio']);
+    this.http.SignUp(this.nombre, this.apellido, this.email, this.password).subscribe(data => {
       console.log(data);
-      localStorage.setItem("Token",data["token"]);
-      this.router.navigate(["/inicio"]);
+      localStorage.setItem('Token', data['token']);
+      this.router.navigate(['/inicio']);
 
     },
-    err=>{console.log(err);});
-    if(localStorage.getItem("Token")){
-      
+    err => {console.log(err); });
+    if (localStorage.getItem('Token')) {
+
     }
     return 0;
-    
+
    }
 
 
@@ -61,7 +59,7 @@ export class SignupComponent implements OnInit {
     /*this.snackBar.open(msn,icono, {
       duration: 2000,
     });*/
-    this.snackBar.openFromComponent(FaltaCamposComponent,{
+    this.snackBar.openFromComponent(FaltaCamposComponent, {
       duration: 1000,
     });
   }
@@ -69,7 +67,7 @@ export class SignupComponent implements OnInit {
     /*this.snackBar.open(msn,icono, {
       duration: 2000,
     });*/
-    this.snackBar.openFromComponent(MailErrorComponent,{
+    this.snackBar.openFromComponent(MailErrorComponent, {
       duration: 1000,
     });
   }
@@ -78,7 +76,7 @@ export class SignupComponent implements OnInit {
     /*this.snackBar.open(msn,icono, {
       duration: 2000,
     });*/
-    this.snackBar.openFromComponent(NoPassComponent,{
+    this.snackBar.openFromComponent(NoPassComponent, {
       duration: 1000,
     });
   }
